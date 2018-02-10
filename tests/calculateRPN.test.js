@@ -2,11 +2,11 @@ import calculateRPN from '@/calculateRPN';
 
 describe('calculateRPN', () => {
   describe('when provided with empty array or not array', () => {
-    test('should return null', () => {
-      expect(calculateRPN([])).toBeNull();
-      expect(calculateRPN(123)).toBeNull();
-      expect(calculateRPN('')).toBeNull();
-      expect(calculateRPN(undefined)).toBeNull();
+    test('should return 0', () => {
+      expect(calculateRPN([])).toBe(0);
+      expect(calculateRPN(123)).toBe(0);
+      expect(calculateRPN('')).toBe(0);
+      expect(calculateRPN(undefined)).toBe(0);
     });
   });
 
