@@ -3,7 +3,9 @@
 import {
   countParentheses,
   identifyOperand,
-  removeWhitespaces
+  removeWhitespaces,
+  splitOnOperands,
+  isNumeric
 } from '@/helpers';
 
 function validateString (string) {
@@ -24,10 +26,6 @@ function validateString (string) {
   return true;
 }
 
-function isNumeric (thing) {
-  return !isNaN(thing);
-}
-
 export default function infixToRPN (string) {
   const validate = validateString(string);
   if (validate !== true) {
@@ -36,7 +34,8 @@ export default function infixToRPN (string) {
 
   const stack = [];
   const output = [];
-  string = removeWhitespaces(string).split('');
+  string = removeWhitespaces(string);
+  string = splitOnOperands(string);
 
   if (!isNumeric(string[0])) {
     throw 'InvalidEquation';

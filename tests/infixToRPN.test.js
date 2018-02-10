@@ -68,4 +68,10 @@ describe('infixToRPN', () => {
       expect(infixToRPN('2 + 2')).toEqual(expect.arrayContaining([2, 2, '+']));
     });
   });
+
+  describe('when provided equation with two and more digit number', () => {
+    test('should return good result', () => {
+      expect(infixToRPN('2+12')).toEqual(expect.arrayContaining([2, 12, '+']));
+    });
+  });
 });

@@ -63,3 +63,23 @@ describe('countParentheses', () => {
     });
   });
 });
+
+describe('splitOnOperands', () => {
+  const splitOnOperands = helpers.splitOnOperands;
+
+  describe('when provided with empty string or not string', () => {
+    test('should return empty array', () => {
+      expect(splitOnOperands('')).toEqual(expect.arrayContaining([]));
+      expect(splitOnOperands(123)).toEqual(expect.arrayContaining([]));
+    });
+  });
+
+  describe('when provided with valid string', () => {
+    describe('when single digit numbers', () => {
+      test('should return proper result', () => {
+        expect(splitOnOperands('2+2')).toEqual(expect.arrayContaining(['2', '+', '2']));
+        expect(splitOnOperands('(2+2)*2')).toEqual(expect.arrayContaining(['(', '2', '+', '2', ')', '*', '2']));
+      });
+    });
+  });
+});
