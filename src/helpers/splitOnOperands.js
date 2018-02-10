@@ -1,4 +1,5 @@
-import { isNumeric, identifyOperand } from './index';
+import isNumeric from './isNumeric';
+import identifyOperand from './identifyOperand';
 
 export default function splitOnOperands (string) {
   if (!string || typeof string !== 'string') {
