@@ -20,12 +20,15 @@
     "babel-preset-env": "^1.6.1",
     "jest": "^22.2.2",
     "rollup": "^0.55.5",
-    "rollup-plugin-alias": "^1.4.0",
+    "rollup-plugin-alias": "https://github.com/soanvig/rollup-plugin-alias",
     "rollup-plugin-commonjs": "^8.3.0",
     "rollup-plugin-json": "^2.3.0",
     "rollup-plugin-node-resolve": "^3.0.2"
   },
   "jest": {
-    "testPathIgnorePatterns": ["/node_modules/", "/scripts/"]
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/scripts/"
+    ]
   }
 }
