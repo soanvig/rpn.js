@@ -39,3 +39,27 @@ describe('identifyOperand', () => {
     });
   });
 });
+
+describe('countParentheses', () => {
+  const countParentheses = helpers.countParentheses;
+
+  describe('when string is empty', () => {
+    test('should return array [0, 0]', () => {
+      expect(countParentheses('')).toEqual(expect.arrayContaining([0, 0]));
+    });
+  });
+
+  describe('when not string is provided', () => {
+    test('should return array [0, 0]', () => {
+      expect(countParentheses(123)).toEqual(expect.arrayContaining([0, 0]));
+    });
+  });
+
+  describe('when string has some parantheses', () => {
+    test('should return expected result', () => {
+      expect(countParentheses('(123,')).toEqual(expect.arrayContaining([1, 0]));
+      expect(countParentheses('())')).toEqual(expect.arrayContaining([1, 2]));
+      expect(countParentheses('(())')).toEqual(expect.arrayContaining([2, 2]));
+    });
+  });
+});
