@@ -22,5 +22,13 @@ describe('calculateRPN', () => {
     test('should evaluate [2, 2, 2, *, +] into 6', () => {
       expect(calculateRPN([2, 2, 2, '*', '+'])).toBe(6);
     });
+
+    test('should evaluate [2, 2, 3, ^, +] to 10', () => {
+      expect(calculateRPN([2, 2, 3, '^', '+'])).toBe(10);
+    });
+
+    test('should evaluate [4, 3, %] to 1', () => {
+      expect(calculateRPN([4, 3, '%'])).toBe(1);
+    });
   });
 });
