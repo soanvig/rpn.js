@@ -37,7 +37,11 @@ export default function infixToRPN (string) {
   string = removeWhitespaces(string);
   string = splitOnOperands(string);
 
-  if (!isNumeric(string[0])) {
+  if (
+    !isNumeric(string[0])
+    && string[0] !== '('
+    && string[0] !== ')'
+  ) {
     throw 'InvalidEquation';
   }
 
