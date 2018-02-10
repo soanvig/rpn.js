@@ -4,3 +4,17 @@
 
 Converts any string equation (infix notation) to RPN.
 Calculates RPN notations.
+
+## Usage
+
+### infixToRPN
+
+```js
+import { infixToRPN } from 'rpn.js';
+
+const infix = '(2 + 2) * 2';
+const rpn = infixToRPN(infix);
+
+console.log(rpn);
+// => [2, 2, 2, '+', '*']
+```

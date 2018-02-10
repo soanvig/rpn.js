@@ -11,6 +11,7 @@ export default {
     file: 'dist/bundle.js',
     format: 'umd',
     sourcemap: true,
+    name: 'RPN'
   },
   plugins: [
     alias({

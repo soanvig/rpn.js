@@ -1,7 +1,19 @@
 {
+  "name": "rpn.js",
+  "author": "Soanvig",
+  "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "test": "node scripts/test.js --env=jsdom",
     "build": "yarn run rollup -c"
+  },
+  "files": [
+    "dist/bundle.js"
+  ],
+  "main": "dist/bundle.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soanvig/rpn.js.git"
   },
   "devDependencies": {
     "babel-plugin-module-resolver": "^3.0.0",
